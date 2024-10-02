@@ -3,6 +3,7 @@ import { useRouter, useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
+
 interface Product {
   _id: string;
   name: string;
