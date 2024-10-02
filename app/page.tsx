@@ -194,7 +194,7 @@ const Page = () => {
                 href="/Store"
                 className="px-8 py-1 rounded-lg bg-orange-500 text-white my-2 hover:bg-orange-600 lg:px-10 lg:py-2"
               >
-                buy
+                خرید
               </Link>
             </button>
           </div>
@@ -334,32 +334,7 @@ const Page = () => {
           </div>
         </div>
 
-        {/* <div className="flex overflow-x-auto space-x-4 p-4">
-          <div className="shrink-0 w-fit h-fit  rounded-lg">
-            {" "}
-            <ProductCard />
-          </div>
-          <div className="shrink-0 w-fit h-fit  rounded-lg">
-            {" "}
-            <ProductCard />
-          </div>
-          <div className="shrink-0 w-fit h-fit  rounded-lg">
-            {" "}
-            <ProductCard />
-          </div>
-          <div className="shrink-0 w-fit h-fit  rounded-lg">
-            {" "}
-            <ProductCard />
-          </div>
-          <div className="shrink-0 w-fit h-fit  rounded-lg">
-            {" "}
-            <ProductCard />
-          </div>
-          <div className="shrink-0 w-fit h-fit  rounded-lg">
-            {" "}
-            <ProductCard />
-          </div>
-        </div> */}
+        
 
         <div className="grid col-span-9 w-full mt-4 px-1 lg:px-4 ">
           <div className="w-full flex justify-center item-center">
