@@ -10,20 +10,20 @@ interface Feature {
 
 const features: Feature[] = [
   {
-    title: "راهنما ی خرید هارد اکسترنال ایرانیان",
+    title: " چطوری هارد دیسکمون رو نجات بدیم؟! تعمیرات هارد دیسک",
     description:
-      "تو این مقاله میتونی خیلی راحت تمام چیز ها را درمورد خرید هارد بدونی و دیگه هر وقت بخوای هارد مناسب کارتو سریع پیدا کنی.",
+      " هارد دیسک‌هاتون ناگهان به هم می‌ریزه و مشکل ساز شده؟ نگران نباشید! در اینجا چند راهکار ساده و کاربردی برای نجات هارد دیسکتون داریم:",
     category: "هارد",
-    imageUrl: "/assets/images/computer-banner2.jpeg",
-    learnMoreLink: "/blogs",
+    imageUrl: "/assets/images/hard-external.webp",
+    learnMoreLink: "/hard-drive-repair",
   },
   {
-    title: "کنکاش دکتر ",
+    title: "کلینیک تعمیرات لپتاپ",
     description:
       "اگر مشکلی برای سیستمت پیش اومده اینجا برای ما توضیح بده و ما برات حلش میکنیم",
     category: "تعمیرات",
-    imageUrl: "/assets/images/computer-banner3.jpeg",
-    learnMoreLink: "/blogs"
+    imageUrl: "/assets/images/laptoprepair.jpg",
+    learnMoreLink: "/repair"
   },
   
     

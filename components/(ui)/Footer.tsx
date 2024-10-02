@@ -3,7 +3,8 @@ import Link from "next/link";
 
 const Footer: React.FC = () => {
   return (
-    <div className="fixed bottom-0 flex justify-around h-30 shadow-lg py-2 rounded-lg text-white   text-center bg-gray-800 w-full">
+    <div>
+    <div className=" flex justify-around h-30 shadow-lg py-2 rounded-lg text-white   text-center bg-gray-800 w-full">
       <Link href="/login">
         <div className="flex flex-col itens0center gap-1 font-bold text-white  rounded-lg shadow-lg px-2 py-2 w-16">
           <div className="text-center  py-2 px-2 rounded-full shadow-full flex flex-col items-center">
@@ -43,7 +44,7 @@ const Footer: React.FC = () => {
         </div>
       </Link>
 
-      <Link href="/cart">
+      <Link href="/Store">
         <div className="flex flex-col itens0center gap-1 font-bold text-orange-500 rounded-lg shadow-lg px-2 py-2 ">
           <div className="text-center  py-2 px-1 rounded-full shadow-full flex flex-col items-center">
             <svg
@@ -180,6 +181,10 @@ const Footer: React.FC = () => {
           <div className="text-center text-white flex flex-col ">خانه</div>
         </div>
       </Link>
+      
+
+      
+    </div>
     </div>
   );
 };

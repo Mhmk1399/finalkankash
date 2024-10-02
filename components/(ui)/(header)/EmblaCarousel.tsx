@@ -41,10 +41,12 @@ const EmblaCarousel: React.FC<PropType> = ({ options }) => {
 
   return (
     <div className="embla relative w-full max-w-6xl mx-auto">
+      <Link href="/Store">
       <div
         className="embla__viewport overflow-hidden rounded-lg"
         ref={emblaRef}
       >
+        
         <div className="embla__container flex">
           {images.map((image: { image?: string; name?: string }, index) => (
             <div className="embla__slide relative min-w-full" key={index}>
@@ -61,9 +63,7 @@ const EmblaCarousel: React.FC<PropType> = ({ options }) => {
                   {image.name || `Slide ${index + 1}`}
                 </h1>
 
-                <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-full shadow-md transition-all duration-300">
-                  <Link href="/Store">اطلاعات بیشتر</Link>
-                </button>
+                
               </div>
             </div>
           ))}{" "}
@@ -85,6 +85,7 @@ const EmblaCarousel: React.FC<PropType> = ({ options }) => {
         </div>
         <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
       </div>
+      </Link>
     </div>
   );
 };

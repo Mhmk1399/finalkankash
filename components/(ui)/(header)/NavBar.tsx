@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
               </li>
               <li className="mb-2">
                 <Link
-                  href="/hard-drive-repair"
+                  href="/repair"
                   className="block hover:text-indigo-400"
                 >
                   تعمیر و تعویض هارد

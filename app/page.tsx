@@ -15,11 +15,12 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 const Page = () => {
   return (
     
-    <div className="flex flex-col w-full h-auto p-1 bg-gradient-to-b from-gray-100 via-orange-200 to-gray-100 py-8 px-2 lg:py-12 lg:px-4">
+    <div className="flex flex-col w-full h-auto p-1 bg-gradient-to-b from-gray-100 via-orange-200 to-white py-8 px-2 lg:py-12 lg:px-4">
       <Sidebar />
       <div className="flex flex-col w-full justify-center items-center bg-white shadow-lg rounded-lg py-4 px-2 lg:py-6 lg:px-4">
         <EmblaCarousel options={OPTIONS} />
       </div>
+      <Link href="/Store">
       <div className="flex flex-row items-center justify-evenly mt-5 bg-transparent text-black rounded-xl p-4 ">
         <div className="flex flex-col items-center text-center">
           {" "}
@@ -34,7 +35,7 @@ const Page = () => {
             <g
               id="SVGRepo_tracerCarrier"
               strokeLinecap="round"
-              stroke-linejoin="round"
+              strokeLinejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
               {" "}
@@ -66,7 +67,7 @@ const Page = () => {
             <g
               id="SVGRepo_tracerCarrier"
               strokeLinecap="round"
-              stroke-linejoin="round"
+              strokeLinejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
               {" "}
@@ -102,7 +103,7 @@ const Page = () => {
             <g
               id="SVGRepo_tracerCarrier"
               strokeLinecap="round"
-              stroke-linejoin="round"
+              strokeLinejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
               {" "}
@@ -163,6 +164,7 @@ const Page = () => {
           <h5 className="font-semibold text-xl">Accessories</h5>
         </div>
       </div>
+      </Link>
 
       <div
         className=" grid-cols-9 gap-1 w-full lg:grid-cols-12 lg:gap-4"
@@ -204,7 +206,7 @@ const Page = () => {
         >
           <div className="flex flex-col items-center object-cover rounded-lg shadow-lg p-1">
             <Image
-              src="/assets/images/computer-banner2.jpeg"
+              src="/assets/images/second.png"
               width={400}
               height={100}
               alt="image"
