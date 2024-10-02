@@ -3,7 +3,6 @@ import "./globals.css";
 import Footer from "@/components/(ui)/Footer";
 import Navbar from "@/components/(ui)/(header)/NavBar";
 import { EdgeStoreProvider } from "@/lib/edgestore";
-import { store } from "../lib/store";
 export const metadata: Metadata = {
   title: "کنکاش استوک",
   description: "اولین فروشگاه تعمیر و خرید هارد اکسترنال ایرانیان",
