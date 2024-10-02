@@ -210,6 +210,7 @@ const Page = () => {
               width={400}
               height={100}
               alt="image"
+              
               className="rounded-lg shadow-lg lg:w-3/4"
             />
             <h1
