@@ -10,8 +10,12 @@ interface Product {
   description: string;
   price: number;
   image: string;
-  colors: string[];
+  color: string[];
   info: string[];
+  hard:string
+  gpu:string
+  cpu:string
+  ram:string
 }
 
 const ProductPage: React.FC = () => {
@@ -32,6 +36,8 @@ const ProductPage: React.FC = () => {
           const data = await res.json();
           setProduct(data);
           setLoading(false);
+          console.log(data);
+          
         } catch (error) {
           console.error('Error fetching product:', error);
           setLoading(false);
@@ -39,6 +45,8 @@ const ProductPage: React.FC = () => {
       };
       fetchProduct();
     }
+   
+    
   }, [id]);
 
   // Show loading state while fetching data
@@ -52,28 +60,28 @@ const ProductPage: React.FC = () => {
   }
 
   return (
-    <div className="bg-gray-100 dark:bg-gray-800 py-8" dir="rtl">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-gray-100  py-24" dir="rtl">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
         <div className="flex flex-col md:flex-row -mx-4">
           {/* Image Section */}
           <div className="md:flex-1 px-4">
-            <div className="h-[460px] rounded-lg bg-gray-300 dark:bg-gray-700 mb-4">
+            <div className="h-[460px] rounded-lg bg-gray-300 mb-4">
               <Image
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover hover:opacity-85 transition duration-150 ease-in-out rounded-lg shadow-md hover:shadow-lg"
                 src={product.image}
                 alt={product.name}
                 width={200}
                 height={200}
               />
             </div>
-            <div className="flex -mx-2 mb-4">
+            <div className="flex -mx-2 mb-4 ">
               <div className="w-1/2 px-2">
-                <button className="w-full bg-gray-900 dark:bg-gray-600 text-white py-2 px-4 rounded-full font-bold hover:bg-gray-800 dark:hover:bg-gray-700 text-sm">
+                <button className="w-full bg-gray-900 text-white py-2 px-4 rounded-full font-bold hover:bg-gray-800 text-sm">
                  خرید
                 </button>
               </div>
               <div className="w-1/2 px-2">
-                <button className="w-full bg-gray-200 dark:bg-gray-700 text-gray-800 text-sm dark:text-white py-2 px-4 rounded-full font-bold hover:bg-gray-300 dark:hover:bg-gray-600">
+                <button className="w-full bg-gray-200 text-gray-800 text-sm  py-2 px-4 rounded-full font-bold hover:bg-gray-300">
                   علاقه مندی ها
                 </button>
               </div>
@@ -82,30 +90,39 @@ const ProductPage: React.FC = () => {
 
           {/* Product Info Section */}
           <div className="md:flex-1 px-4">
-            <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">
+            <h2 className="text-2xl font-bold text-gray-800 mb-2">
               {product.name}
             </h2>
-            <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-              {product.description}
-            </p>
+          
 
-            {/* Price and Availability */}
-            <div className="flex mb-4">
-              <div className="mr-4">
-                <span className="font-bold text-orange-500 dark:text-orange-500 mx-2">
-                  قیمت :
-                </span>
-                <span className="text-gray-600 dark:text-gray-300">
-                  تومان{product.price.toLocaleString('fa-IR')}
-                </span>
-              </div>
-            </div>
+            
 
             {/* Select Color */}
-            <div className="mb-4">
-              <span className="font-bold text-gray-700 dark:text-gray-300">
+            <h2>مشخصات</h2>
+            <div className="my-4   gap-3 grid grid-cols-3">
+              <span className="text-sm py-2 px-4 bg-slate-200 rounded-lg text-gray-500 flex flex-col col-span-1">
                 رنگ های موجود
+                <span className=' font-medium text-black px-2'>{product.color}</span>
               </span>
+              <span className="text-sm py-2 px-4 bg-slate-200 rounded-lg text-gray-500 flex flex-col col-span-1">
+              حافظه داخلی : 
+                <span className=' font-medium  text-black px-2'>{product.hard} </span>
+              </span>
+              <span className="text-sm py-2 px-4 bg-slate-200 rounded-lg text-gray-500 flex flex-col col-span-1">
+              گرافیک : 
+                <span className='font-medium  text-black px-2'>{product.gpu}</span>
+              </span>
+
+              <span className="text-sm py-2 px-4 bg-slate-200 rounded-lg text-gray-500 flex flex-col col-span-1">
+                رم: 
+                <span className='font-medium text-black px-2'>{product.ram}</span>
+              </span>
+              <span className="text-sm py-2 px-4 bg-slate-200 rounded-lg text-gray-500 flex flex-col col-span-1">
+              پردازنده: 
+                <span className='font-medium text-black px-2'>{product.cpu}</span>
+              </span>
+             
+              
               {/* <div className="flex items-center mt-2">
                 {product.colors.map((color, index) => (
                   <button
@@ -119,12 +136,24 @@ const ProductPage: React.FC = () => {
 
             {/* Product Description */}
             <div>
-              <span className="font-bold text-gray-700 dark:text-gray-300">
+              <span className=" text-gray-700 my-4">
                 توضیحات
               </span>
-              <p className="text-gray-600 dark:text-gray-300 text-sm mt-2">
+              <p className="text-gray-600 text-sm mt-2 bg-slate-200 py-2 px-2 rounded-lg">
                 {product.description}
               </p>
+            </div>
+            {/* Price and Availability */}
+            <div className="flex justify-between  my-4 border border-gray-300 py-4 rounded-lg items-center">
+              <div className="w-full flex justify-between mx-5">
+                <span className="font-bold text-orange-500  mx-2">
+                  قیمت :
+                </span>
+                <span className="text-gray-600 ">
+                  تومان:{product.price.toLocaleString('fa-IR')}
+                </span>
+              </div> 
+             
             </div>
           </div>
         </div>
@@ -132,5 +161,4 @@ const ProductPage: React.FC = () => {
     </div>
   );
 };
-
 export default ProductPage;

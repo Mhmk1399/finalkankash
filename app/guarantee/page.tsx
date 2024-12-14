@@ -20,7 +20,7 @@
     };
   
     return (
-      <div className="max-w-5xl mx-auto p-6 bg-gradient-to-b from-gray-100 via-orange-200 to-white" dir="rtl">
+      <div className="max-w-5xl mx-auto p-6 mt-44 bg-gradient-to-b from-gray-100 via-orange-200 to-white" dir="rtl">
         <div className="bg-gray-50 p-8 rounded-lg shadow-md">
           <div className="grid grid-cols-2 gap-4 text-center">
             <button
@@ -68,7 +68,7 @@
               همچنین برای تماس با پشتیبانی میتوانید از طریق دکمه‌ی زیر تماس حاصل
               فرمایید.
             </p>
-            <button className="bg-white mx-auto px-4 bg-gradient-to-l from-gray-100 to-orange-200 text-center border-2 border-gray-200 text-gray-800 font-bold py-3 px-6 rounded-full flex justify-center items-center shadow-md transition hover:bg-gray-100">
+            <button className="bg-white mx-auto px-4 bg-gradient-to-l from-gray-100 to-orange-200 text-center border-2 border-gray-200 text-gray-800 font-bold py-3 rounded-full flex justify-center items-center shadow-md transition hover:bg-gray-100">
               <Link href="tel:+989356139033">
                 <svg
                   width="32px"

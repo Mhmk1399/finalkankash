@@ -39,9 +39,13 @@ const ProductSchema = new mongoose.Schema({
         type: String,
         required: false,
     },
+    display: {
+        type: String,
+        required: false,
+    },
     color: {
         type: String,
-        required: true,
+        required: false,
     },
     category: {
         type:mongoose.Schema.Types.ObjectId,

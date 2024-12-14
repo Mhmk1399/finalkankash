@@ -88,3 +88,41 @@
     left: 18px;
     bottom: 6px;
   }
+
+
+
+  .embla__button {
+    /* -webkit-appearance: none; */
+    background-color: transparent;
+    touch-action: manipulation;
+    display: inline-flex;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+  }
+  
+  .embla__button:hover {
+    background-color: rgba(214, 124, 5, 0.9);
+  }
+  
+  .embla__button__svg {
+    width: 20px;
+    height: 20px;
+    color: white;
+  }
+  
+  .embla__button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+  

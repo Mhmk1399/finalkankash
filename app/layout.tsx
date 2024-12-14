@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Navbar />
           <div className="flex flex-col min-h-screen">
             <EdgeStoreProvider>
-              <div className="flex-grow mb-36">{children}</div>
+              <div className="flex-grow">{children}</div>
             </EdgeStoreProvider>
             <Footer />
           </div>

@@ -11,21 +11,22 @@ interface Product {
   ram: string;
   hard: string;
   gpu: string;
+  display: string;
 }
 
 const ProductCard = ({ product }: { product: Product }) => {
   return (
-    <Link href={`/DetailedPage/${product._id}`} passHref>
-      <div className="flex-shrink-0 w-80 sm:w-96 lg:w-72 xl:w-80 transition-transform duration-300 transform hover:scale-105 mt-8 cursor-pointer">
-        <div className="relative border border-gray-200 rounded-lg shadow-md bg-white p-5 lg:p-6 hover:shadow-lg">
+    <Link href={`/DetailedPage/${product._id}`} passHref className=" h-[500px]">
+      <div className="flex-shrink-0 w-80 sm:w-96 lg:w-72  xl:w-80 transition-transform duration-300 transform hover:scale-105  cursor-pointer mt-5 ">
+        <div className="relative border border-gray-200 rounded-lg shadow-md bg-white p-5 lg:p-6 hover:shadow-lg ">
           {/* Product Image */}
-          <div className="flex justify-center items-center mb-6">
+          <div className="flex justify-center items-center mb-6 ">
             <Image
               src={product.image}
-              width={150}
-              height={200}
+              width={300}
+              height={250}
               alt={product.name}
-              className="rounded-lg w-auto h-auto object-cover"
+              className="rounded-lg  h-auto object-cover max-h-[120px] w-[250px]"
             />
           </div>
 
@@ -36,29 +37,35 @@ const ProductCard = ({ product }: { product: Product }) => {
             </p>
 
             {/* Product Specs with Icons */}
-            <div className="grid grid-cols-2 gap-4 mb-4">
-              <div className="flex items-center justify-center space-x-2 bg-gray-100 p-3 rounded-lg">
+            <div className="grid grid-cols-1 gap-4 mb-4 ">
+              <div className="flex items-center justify-start space-x-2 bg-gray-100 px-3 py-1 rounded-lg">
                 <FaMicrochip className="text-gray-700" size={20} />
                 <span className="text-sm text-gray-700 font-medium">
                   CPU: {product.cpu}
                 </span>
               </div>
-              <div className="flex items-center justify-center space-x-2 bg-gray-100 p-3 rounded-lg">
+              <div className="flex items-center justify-start space-x-2 bg-gray-100 px-3 py-1 rounded-lg">
                 <FaMemory className="text-gray-700" size={20} />
                 <span className="text-sm text-gray-700 font-medium">
                   RAM: {product.ram}
                 </span>
               </div>
-              <div className="flex items-center justify-center space-x-2 bg-gray-100 p-3 rounded-lg">
+              <div className="flex items-center justify-start space-x-2 bg-gray-100 px-3 py-1 rounded-lg">
                 <FaHdd className="text-gray-700" size={20} />
                 <span className="text-sm text-gray-700 font-medium">
                   HDD: {product.hard}
                 </span>
               </div>
-              <div className="flex items-center justify-center space-x-2 bg-gray-100 p-3 rounded-lg">
+              <div className="flex items-center justify-start space-x-2 bg-gray-100 px-3 py-1 rounded-lg">
                 <FaDesktop className="text-gray-700" size={20} />
                 <span className="text-sm text-gray-700 font-medium">
                   GPU: {product.gpu}
+                </span>
+              </div>
+              <div className="flex items-center justify-start space-x-2 bg-gray-100 px-3 py-1 rounded-lg">
+                <FaDesktop className="text-gray-700" size={20} />
+                <span className="text-sm text-gray-700 font-medium">
+                  DISPLAY: {product.display}
                 </span>
               </div>
             </div>

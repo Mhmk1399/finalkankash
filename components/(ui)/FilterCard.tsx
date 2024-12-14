@@ -252,4 +252,4 @@ const FilterComponent: React.FC<FilterComponentProps> = ({
     </div>
   );
 };
-export default FilterComponent;
+
